@@ -6,6 +6,7 @@ target 'MessagingApp' do
   use_frameworks!
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   
   # Pods for MessagingApp
 

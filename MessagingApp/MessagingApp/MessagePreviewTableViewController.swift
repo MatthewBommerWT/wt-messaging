@@ -8,70 +8,76 @@
 import UIKit
 import Firebase
 
-let reuseIdentifier = "messagePreviewCell"
+fileprivate let reuseIdentifier = "conversationCell"
 
 class MessagePreviewTableViewController: UITableViewController {
-    var conversations: [MessageMetaData]?
+    
+    let messageCoordinator = MessageCoordinator(userName: UserDefaults.standard.string(forKey: "username")!)
+    var conversations: [Conversation] = []
+    lazy var dataSource: DataSource = makeDataSource()
+    
+    typealias DataSource = UITableViewDiffableDataSource<Section, Conversation>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Conversation>
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(MessangerPreviewTableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return conversations?.count ?? 0
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! MessangerPreviewTableViewCell
-        cell.configure((conversations?[indexPath.item])!)
-        return cell
+        setup()
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func setup() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newConversation))
+        
+        messageCoordinator.makeFirestoreListner { (userData: User) in
+            self.conversations = userData.conversations.map { (key: String, value: String) -> Conversation in
+                Conversation(identifier: value, participant: key)
+            }
+            self.applySnapshot()
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func makeDataSource() -> DataSource {
+        dataSource = DataSource(tableView: self.tableView, cellProvider: { (tableView, indexPath, preview) -> UITableViewCell? in
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
+            cell?.textLabel?.text = self.conversations[indexPath.item].participant
+            return cell
+        })
+        return dataSource
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    // MARK: NSDiffableDataSourceSnapshot
+    func applySnapshot() {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(conversations)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    @objc
+    func newConversation() {
+        let viewController = makeMessageViewController()
+        viewController.inject(handler: messageCoordinator)
+        navigationController?.pushViewController(viewController, animated: false)
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func makeMessageViewController() -> MessageViewController {
+        let bundle = Bundle(for: MessageViewController.self)
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        return storyboard.instantiateViewController(identifier: "MessageViewController") as! MessageViewController
     }
-    */
-
+}
+extension MessagePreviewTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = makeMessageViewController()
+        let conversation = conversations[indexPath.item]
+        viewController.inject(handler: messageCoordinator, conversation: conversation)
+        
+        messageCoordinator.makeRealTimeDatabaseListner(conversationIdentifier: conversation.identifier) { (message: Message) in
+            viewController.messages.append(message)
+            viewController.applySnapshot()
+        }
+        navigationController?.pushViewController(viewController, animated: false)
+    }
+    
 }

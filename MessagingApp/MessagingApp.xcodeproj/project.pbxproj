@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		2D817B42B960809E6703113C /* Pods_MessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C5DE3A400E8F6EA0161C4 /* Pods_MessagingAppTests.framework */; };
 		7E055CDAFDAE495A6DDA9F65 /* Pods_MessagingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C614494150C9478519EE76 /* Pods_MessagingApp.framework */; };
-		8078D0B625FBF348002330C6 /* MessangerPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0B425FBF348002330C6 /* MessangerPreviewTableViewCell.swift */; };
-		8078D0B725FBF348002330C6 /* MessangerPreviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8078D0B525FBF348002330C6 /* MessangerPreviewTableViewCell.xib */; };
+		803DD70A2604E55400FD2077 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DD7092604E55400FD2077 /* LoginViewController.swift */; };
 		8078D0BC25FBF7FD002330C6 /* MessagePreviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */; };
-		8078D0C125FBFA8F002330C6 /* ResultsDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0C025FBFA8F002330C6 /* ResultsDataTypes.swift */; };
+		8078D0C125FBFA8F002330C6 /* DatabaseDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */; };
 		8078D10E25FBFEF9002330C6 /* MessagerArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D10D25FBFEF9002330C6 /* MessagerArchiver.swift */; };
+		8089D7EC25FFF4F00080FC34 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089D7EB25FFF4F00080FC34 /* MessageViewController.swift */; };
 		809E0DAF25FBED06008BDE14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809E0DAE25FBED06008BDE14 /* AppDelegate.swift */; };
 		809E0DB125FBED06008BDE14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809E0DB025FBED06008BDE14 /* SceneDelegate.swift */; };
 		809E0DB625FBED06008BDE14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809E0DB425FBED06008BDE14 /* Main.storyboard */; };
@@ -22,6 +22,8 @@
 		809E0DC625FBED08008BDE14 /* MessagingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809E0DC525FBED08008BDE14 /* MessagingAppTests.swift */; };
 		809E0DD125FBED08008BDE14 /* MessagingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809E0DD025FBED08008BDE14 /* MessagingAppUITests.swift */; };
 		809E0DE225FBF022008BDE14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 809E0DE125FBF022008BDE14 /* GoogleService-Info.plist */; };
+		80E3D87E25FF9F78002180DA /* MessageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3D87D25FF9F78002180DA /* MessageCoordinator.swift */; };
+		80F2666726014D7F0021508E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2666526014D7F0021508E /* MessageTableViewCell.swift */; };
 		F0779FD8E7B356A4C61E6F23 /* Pods_MessagingApp_MessagingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8A5C55821D379132F4656E /* Pods_MessagingApp_MessagingAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,11 +53,11 @@
 		4C8A5C55821D379132F4656E /* Pods_MessagingApp_MessagingAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingApp_MessagingAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1C5DE3A400E8F6EA0161C4 /* Pods_MessagingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F4191051140AFB388D8CCD /* Pods-MessagingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagingAppTests.release.xcconfig"; path = "Target Support Files/Pods-MessagingAppTests/Pods-MessagingAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		8078D0B425FBF348002330C6 /* MessangerPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerPreviewTableViewCell.swift; sourceTree = "<group>"; };
-		8078D0B525FBF348002330C6 /* MessangerPreviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessangerPreviewTableViewCell.xib; sourceTree = "<group>"; };
+		803DD7092604E55400FD2077 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreviewTableViewController.swift; sourceTree = "<group>"; };
-		8078D0C025FBFA8F002330C6 /* ResultsDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDataTypes.swift; sourceTree = "<group>"; };
+		8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDataTypes.swift; sourceTree = "<group>"; };
 		8078D10D25FBFEF9002330C6 /* MessagerArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerArchiver.swift; sourceTree = "<group>"; };
+		8089D7EB25FFF4F00080FC34 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		809E0DAB25FBED06008BDE14 /* MessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809E0DAE25FBED06008BDE14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809E0DB025FBED06008BDE14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		809E0DD025FBED08008BDE14 /* MessagingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingAppUITests.swift; sourceTree = "<group>"; };
 		809E0DD225FBED08008BDE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809E0DE125FBF022008BDE14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80E3D87D25FF9F78002180DA /* MessageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCoordinator.swift; sourceTree = "<group>"; };
+		80F2666526014D7F0021508E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		84C614494150C9478519EE76 /* Pods_MessagingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,11 +156,13 @@
 				809E0DAE25FBED06008BDE14 /* AppDelegate.swift */,
 				809E0DB025FBED06008BDE14 /* SceneDelegate.swift */,
 				809E0DB425FBED06008BDE14 /* Main.storyboard */,
-				8078D0B425FBF348002330C6 /* MessangerPreviewTableViewCell.swift */,
+				803DD7092604E55400FD2077 /* LoginViewController.swift */,
+				80F2666526014D7F0021508E /* MessageTableViewCell.swift */,
 				8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */,
+				8089D7EB25FFF4F00080FC34 /* MessageViewController.swift */,
 				8078D10D25FBFEF9002330C6 /* MessagerArchiver.swift */,
-				8078D0C025FBFA8F002330C6 /* ResultsDataTypes.swift */,
-				8078D0B525FBF348002330C6 /* MessangerPreviewTableViewCell.xib */,
+				80E3D87D25FF9F78002180DA /* MessageCoordinator.swift */,
+				8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */,
 				809E0DB725FBED08008BDE14 /* Assets.xcassets */,
 				809E0DB925FBED08008BDE14 /* LaunchScreen.storyboard */,
 				809E0DE125FBF022008BDE14 /* GoogleService-Info.plist */,
@@ -291,7 +297,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8078D0B725FBF348002330C6 /* MessangerPreviewTableViewCell.xib in Resources */,
 				809E0DBB25FBED08008BDE14 /* LaunchScreen.storyboard in Resources */,
 				809E0DE225FBF022008BDE14 /* GoogleService-Info.plist in Resources */,
 				809E0DB825FBED08008BDE14 /* Assets.xcassets in Resources */,
@@ -423,10 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803DD70A2604E55400FD2077 /* LoginViewController.swift in Sources */,
 				8078D0BC25FBF7FD002330C6 /* MessagePreviewTableViewController.swift in Sources */,
-				8078D0C125FBFA8F002330C6 /* ResultsDataTypes.swift in Sources */,
+				80E3D87E25FF9F78002180DA /* MessageCoordinator.swift in Sources */,
+				80F2666726014D7F0021508E /* MessageTableViewCell.swift in Sources */,
+				8089D7EC25FFF4F00080FC34 /* MessageViewController.swift in Sources */,
+				8078D0C125FBFA8F002330C6 /* DatabaseDataTypes.swift in Sources */,
 				8078D10E25FBFEF9002330C6 /* MessagerArchiver.swift in Sources */,
-				8078D0B625FBF348002330C6 /* MessangerPreviewTableViewCell.swift in Sources */,
 				809E0DAF25FBED06008BDE14 /* AppDelegate.swift in Sources */,
 				809E0DB125FBED06008BDE14 /* SceneDelegate.swift in Sources */,
 			);
