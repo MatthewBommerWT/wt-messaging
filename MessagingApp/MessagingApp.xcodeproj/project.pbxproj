@@ -11,6 +11,7 @@
 		7E055CDAFDAE495A6DDA9F65 /* Pods_MessagingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C614494150C9478519EE76 /* Pods_MessagingApp.framework */; };
 		803DD70A2604E55400FD2077 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DD7092604E55400FD2077 /* LoginViewController.swift */; };
 		803DD70F2605311400FD2077 /* UserDisplayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DD70E2605311400FD2077 /* UserDisplayTableViewController.swift */; };
+		803DD71C260544F100FD2077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 803DD71B260544F100FD2077 /* GoogleService-Info.plist */; };
 		8078D0BC25FBF7FD002330C6 /* MessagePreviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */; };
 		8078D0C125FBFA8F002330C6 /* DatabaseDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */; };
 		8078D10E25FBFEF9002330C6 /* MessagerArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D10D25FBFEF9002330C6 /* MessagerArchiver.swift */; };
@@ -22,7 +23,6 @@
 		809E0DBB25FBED08008BDE14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809E0DB925FBED08008BDE14 /* LaunchScreen.storyboard */; };
 		809E0DC625FBED08008BDE14 /* MessagingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809E0DC525FBED08008BDE14 /* MessagingAppTests.swift */; };
 		809E0DD125FBED08008BDE14 /* MessagingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809E0DD025FBED08008BDE14 /* MessagingAppUITests.swift */; };
-		809E0DE225FBF022008BDE14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 809E0DE125FBF022008BDE14 /* GoogleService-Info.plist */; };
 		80E3D87E25FF9F78002180DA /* MessageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3D87D25FF9F78002180DA /* MessageCoordinator.swift */; };
 		80F2666726014D7F0021508E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F2666526014D7F0021508E /* MessageTableViewCell.swift */; };
 		F0779FD8E7B356A4C61E6F23 /* Pods_MessagingApp_MessagingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8A5C55821D379132F4656E /* Pods_MessagingApp_MessagingAppUITests.framework */; };
@@ -56,6 +56,7 @@
 		78F4191051140AFB388D8CCD /* Pods-MessagingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagingAppTests.release.xcconfig"; path = "Target Support Files/Pods-MessagingAppTests/Pods-MessagingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		803DD7092604E55400FD2077 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		803DD70E2605311400FD2077 /* UserDisplayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisplayTableViewController.swift; sourceTree = "<group>"; };
+		803DD71B260544F100FD2077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreviewTableViewController.swift; sourceTree = "<group>"; };
 		8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDataTypes.swift; sourceTree = "<group>"; };
 		8078D10D25FBFEF9002330C6 /* MessagerArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerArchiver.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		809E0DCC25FBED08008BDE14 /* MessagingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessagingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		809E0DD025FBED08008BDE14 /* MessagingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingAppUITests.swift; sourceTree = "<group>"; };
 		809E0DD225FBED08008BDE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		809E0DE125FBF022008BDE14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		80E3D87D25FF9F78002180DA /* MessageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCoordinator.swift; sourceTree = "<group>"; };
 		80F2666526014D7F0021508E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		84C614494150C9478519EE76 /* Pods_MessagingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,7 +168,7 @@
 				8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */,
 				809E0DB725FBED08008BDE14 /* Assets.xcassets */,
 				809E0DB925FBED08008BDE14 /* LaunchScreen.storyboard */,
-				809E0DE125FBF022008BDE14 /* GoogleService-Info.plist */,
+				803DD71B260544F100FD2077 /* GoogleService-Info.plist */,
 				809E0DBC25FBED08008BDE14 /* Info.plist */,
 			);
 			path = MessagingApp;
@@ -301,7 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				809E0DBB25FBED08008BDE14 /* LaunchScreen.storyboard in Resources */,
-				809E0DE225FBF022008BDE14 /* GoogleService-Info.plist in Resources */,
+				803DD71C260544F100FD2077 /* GoogleService-Info.plist in Resources */,
 				809E0DB825FBED08008BDE14 /* Assets.xcassets in Resources */,
 				809E0DB625FBED06008BDE14 /* Main.storyboard in Resources */,
 			);
