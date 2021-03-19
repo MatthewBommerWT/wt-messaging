@@ -22,6 +22,7 @@ protocol MessageTransfer: class {
     func sendMessage(_ message: String, to receivingUser: String)
     func createConversation(_ message: String, with receivingUser: String) -> Conversation
     func getUserName() -> String
+    func getUsers(handler: @escaping ([String]) -> Void)
 }
 
 class MessageCoordinator: MessageTransfer {
@@ -107,6 +108,15 @@ class MessageCoordinator: MessageTransfer {
     
     func getUserName() -> String {
         return userName
+    }
+    
+    func getUsers(handler: @escaping ([String]) -> Void) {
+        userCollectionRef.getDocuments { (snapshot, _) in
+            guard let documents = snapshot?.documents else {
+                return
+            }
+            handler(documents.map { $0.documentID })
+        }
     }
     
     private func createUserDocument() {

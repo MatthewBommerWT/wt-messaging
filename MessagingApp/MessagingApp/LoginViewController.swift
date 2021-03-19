@@ -19,9 +19,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
-        guard userNameTextField.hasText, let userName = userNameTextField.text else {
+        guard userNameTextField.hasText, var userName = userNameTextField.text else {
             return
         }
+        userName = userName.lowercased()
         userDefaults.set(userName, forKey: "username")
         performSegue(withIdentifier: segueIdentifier, sender: nil)
     }

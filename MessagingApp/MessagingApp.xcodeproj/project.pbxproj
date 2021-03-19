@@ -10,6 +10,7 @@
 		2D817B42B960809E6703113C /* Pods_MessagingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1C5DE3A400E8F6EA0161C4 /* Pods_MessagingAppTests.framework */; };
 		7E055CDAFDAE495A6DDA9F65 /* Pods_MessagingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C614494150C9478519EE76 /* Pods_MessagingApp.framework */; };
 		803DD70A2604E55400FD2077 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DD7092604E55400FD2077 /* LoginViewController.swift */; };
+		803DD70F2605311400FD2077 /* UserDisplayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DD70E2605311400FD2077 /* UserDisplayTableViewController.swift */; };
 		8078D0BC25FBF7FD002330C6 /* MessagePreviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */; };
 		8078D0C125FBFA8F002330C6 /* DatabaseDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */; };
 		8078D10E25FBFEF9002330C6 /* MessagerArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078D10D25FBFEF9002330C6 /* MessagerArchiver.swift */; };
@@ -54,6 +55,7 @@
 		5F1C5DE3A400E8F6EA0161C4 /* Pods_MessagingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F4191051140AFB388D8CCD /* Pods-MessagingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagingAppTests.release.xcconfig"; path = "Target Support Files/Pods-MessagingAppTests/Pods-MessagingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		803DD7092604E55400FD2077 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		803DD70E2605311400FD2077 /* UserDisplayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisplayTableViewController.swift; sourceTree = "<group>"; };
 		8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreviewTableViewController.swift; sourceTree = "<group>"; };
 		8078D0C025FBFA8F002330C6 /* DatabaseDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDataTypes.swift; sourceTree = "<group>"; };
 		8078D10D25FBFEF9002330C6 /* MessagerArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerArchiver.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				809E0DAE25FBED06008BDE14 /* AppDelegate.swift */,
 				809E0DB025FBED06008BDE14 /* SceneDelegate.swift */,
 				809E0DB425FBED06008BDE14 /* Main.storyboard */,
+				803DD70E2605311400FD2077 /* UserDisplayTableViewController.swift */,
 				803DD7092604E55400FD2077 /* LoginViewController.swift */,
 				80F2666526014D7F0021508E /* MessageTableViewCell.swift */,
 				8078D0BB25FBF7FD002330C6 /* MessagePreviewTableViewController.swift */,
@@ -435,6 +438,7 @@
 				8089D7EC25FFF4F00080FC34 /* MessageViewController.swift in Sources */,
 				8078D0C125FBFA8F002330C6 /* DatabaseDataTypes.swift in Sources */,
 				8078D10E25FBFEF9002330C6 /* MessagerArchiver.swift in Sources */,
+				803DD70F2605311400FD2077 /* UserDisplayTableViewController.swift in Sources */,
 				809E0DAF25FBED06008BDE14 /* AppDelegate.swift in Sources */,
 				809E0DB125FBED06008BDE14 /* SceneDelegate.swift in Sources */,
 			);

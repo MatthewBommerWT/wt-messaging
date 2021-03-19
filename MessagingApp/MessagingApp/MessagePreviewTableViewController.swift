@@ -26,7 +26,7 @@ class MessagePreviewTableViewController: UITableViewController {
     }
     
     func setup() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newConversation))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(choosePartner))
         
         messageCoordinator.makeFirestoreListner { (userData: User) in
             self.conversations = userData.conversations.map { (key: String, value: String) -> Conversation in
@@ -54,9 +54,18 @@ class MessagePreviewTableViewController: UITableViewController {
     }
     
     @objc
-    func newConversation() {
+    func choosePartner() {
+        messageCoordinator.getUsers { users in
+            let UserDisplay = self.makeDisplayViewController()
+            UserDisplay.inject(users, handler: self)
+            self.navigationController?.present(UserDisplay, animated: true, completion: nil)
+        }
+        
+    }
+    
+    func newConversation(user: String) {
         let viewController = makeMessageViewController()
-        viewController.inject(handler: messageCoordinator)
+        viewController.inject(handler: messageCoordinator, receiver: user)
         navigationController?.pushViewController(viewController, animated: false)
     }
     
@@ -64,6 +73,12 @@ class MessagePreviewTableViewController: UITableViewController {
         let bundle = Bundle(for: MessageViewController.self)
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         return storyboard.instantiateViewController(identifier: "MessageViewController") as! MessageViewController
+    }
+    
+    func makeDisplayViewController() -> UserDisplayTableViewController {
+        let bundle = Bundle(for: UserDisplayTableViewController.self)
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        return storyboard.instantiateViewController(identifier: "UserDisplay") as! UserDisplayTableViewController
     }
 }
 extension MessagePreviewTableViewController {

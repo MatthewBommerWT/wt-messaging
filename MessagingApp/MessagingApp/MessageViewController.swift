@@ -23,6 +23,7 @@ class MessageViewController: UIViewController {
     
     weak var handler: MessageTransfer?
     var conversation: Conversation?
+    var receiver: String?
     
     lazy var dataSource: DataSource = makeDataSource()
     
@@ -38,8 +39,9 @@ class MessageViewController: UIViewController {
         
     }
     
-    func inject(handler: MessageTransfer) {
+    func inject(handler: MessageTransfer, receiver: String) {
         self.handler = handler
+        self.receiver = receiver
     }
     
     func inject(handler: MessageTransfer, conversation: Conversation) {
@@ -89,7 +91,7 @@ class MessageViewController: UIViewController {
         messageTextField.text = ""
         
         guard let id = conversation?.identifier else {
-            self.conversation = handler?.createConversation(messageText, with: "matt")
+            self.conversation = handler?.createConversation(messageText, with: receiver!)
             return
         }
         handler?.sendMessage(messageText, to: id)
